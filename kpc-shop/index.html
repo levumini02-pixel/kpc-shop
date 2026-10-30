@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KPC Shop - Điện thoại, laptop, máy tính bảng, âm thanh và phụ kiện công nghệ chính hãng.">
+  <meta name="keywords" content="KPC Shop, điện thoại, laptop, máy tính bảng, phụ kiện công nghệ">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#e53935">
+  <title>KPC Shop - Công nghệ trong tầm tay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="announcement-bar">
+    <div class="container announcement-inner">
+      <span>⚡ Ưu đãi công nghệ mỗi ngày tại KPC</span>
+      <div class="announcement-links"><span>📍 Hệ thống cửa hàng</span><span>☎ 1800 6868</span><span>Hỗ trợ 8:00–22:00</span></div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-main">
+      <button class="brand" data-action="go-view" data-view="home" aria-label="Về trang chủ KPC">
+        <span class="brand-mark">KPC<span>.</span></span>
+        <span class="brand-tagline">CÔNG NGHỆ TRONG TẦM TAY</span>
+      </button>
+      <button class="category-trigger" id="categoryToggle" type="button" data-action="toggle-category-menu" aria-expanded="false" aria-controls="categoryMegaMenu">
+        <span class="category-trigger-icon" aria-hidden="true">☰</span><span>Danh mục</span><span class="category-trigger-chevron" aria-hidden="true">⌄</span>
+      </button>
+      <form class="search-form" id="searchForm" role="search">
+        <input id="searchInput" type="search" placeholder="Bạn cần tìm điện thoại, laptop..." aria-label="Tìm sản phẩm">
+        <button type="submit" aria-label="Tìm kiếm">⌕</button>
+      </form>
+      <div class="header-actions">
+        <button class="header-action" data-action="go-view" data-view="stores"><span class="action-icon">⌖</span><span>Cửa hàng</span></button>
+        <button class="header-action cart-action" data-action="show-cart"><span class="action-icon">🛒</span><span>Giỏ hàng</span><b class="cart-count" id="cartCount">0</b></button>
+      </div>
+    </div>
+    <section class="category-mega-menu hidden" id="categoryMegaMenu" aria-label="Danh mục sản phẩm KPC">
+      <div class="mega-sidebar">
+        <div class="mega-sidebar-heading"><span class="mega-overline">KHÁM PHÁ KPC</span><h2>Danh mục sản phẩm</h2><p>Chọn nhóm thiết bị bạn đang quan tâm.</p></div>
+        <div class="mega-category-list" id="megaCategoryList"></div>
+        <button class="mega-all-categories" type="button" data-action="go-view" data-view="products">Xem tất cả sản phẩm <span>→</span></button>
+      </div>
+      <div class="mega-main" id="megaCategoryContent" aria-live="polite"></div>
+      <aside class="mega-quicklinks" aria-label="Tiện ích KPC">
+        <div class="mega-quicklinks-heading"><strong>Tiện ích KPC</strong><span>Hỗ trợ mua sắm</span></div>
+        <button class="mega-quick-card" data-action="go-view" data-view="products"><span class="quick-card-icon quick-red">✦</span><span><strong>Sản phẩm nổi bật</strong><small>Khám phá lựa chọn hôm nay</small></span><b>→</b></button>
+        <button class="mega-quick-card" data-action="go-view" data-view="news"><span class="quick-card-icon quick-orange">▤</span><span><strong>Tin công nghệ</strong><small>Xu hướng và mẹo hữu ích</small></span><b>→</b></button>
+        <button class="mega-quick-card" data-action="go-view" data-view="stores"><span class="quick-card-icon quick-blue">⌖</span><span><strong>Hệ thống cửa hàng</strong><small>Thông tin và liên hệ</small></span><b>→</b></button>
+        <button class="mega-quick-card" data-action="go-view" data-view="admin"><span class="quick-card-icon quick-dark">⚙</span><span><strong>Quản trị website</strong><small>Cấu hình SEO và Facebook</small></span><b>→</b></button>
+        <div class="mega-support-card"><span>☏</span><div><strong>Cần KPC tư vấn?</strong><small>Hotline minh họa: 1800 6868</small></div></div>
+      </aside>
+    </section>
+    <nav class="main-nav">
+      <div class="container nav-inner">
+        <button class="nav-link active" data-action="go-view" data-view="home">⌂ Trang chủ</button>
+        <button class="nav-link" data-action="go-view" data-view="products">▦ Sản phẩm</button>
+        <button class="nav-link" data-action="go-view" data-view="products" data-category="Điện thoại">Điện thoại</button>
+        <button class="nav-link" data-action="go-view" data-view="products" data-category="Laptop">Laptop</button>
+        <button class="nav-link" data-action="go-view" data-view="products" data-category="Máy tính bảng">Máy tính bảng</button>
+        <button class="nav-link" data-action="go-view" data-view="products" data-category="Âm thanh">Âm thanh</button>
+        <button class="nav-link" data-action="go-view" data-view="products" data-category="Phụ kiện">Phụ kiện</button>
+        <button class="nav-link" data-action="go-view" data-view="news">Tin công nghệ</button>
+        <button class="nav-link admin-nav-link" data-action="go-view" data-view="admin">⚙ Quản trị</button>
+      </div>
+    </nav>
+  </header>
+  <div class="category-backdrop hidden" id="categoryBackdrop" data-action="close-category-menu" aria-hidden="true"></div>
+
+  <main id="app" class="container page-container" aria-live="polite">
+    <div class="loading-state">KPC Shop đang khởi tạo...</div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-block">
+        <div class="brand-mark footer-brand">KPC<span>.</span></div>
+        <p>Chọn công nghệ tốt. Sống tiện nghi hơn.</p>
+        <p class="muted-light">Website mẫu phục vụ bài tập thực hành HTML, CSS và JavaScript.</p>
+      </div>
+      <div><h3>Về KPC</h3><button data-action="go-view" data-view="stores">Hệ thống cửa hàng</button><button data-action="go-view" data-view="news">Tin công nghệ</button><button data-action="go-view" data-view="admin">Khu vực quản trị</button></div>
+      <div><h3>Hỗ trợ khách hàng</h3><a href="mailto:hotro@kpcshop.vn">hotro@kpcshop.vn</a><span>Hotline: 1800 6868</span><span>08:00 – 22:00 mỗi ngày</span></div>
+      <div><h3>Nhận tin ưu đãi</h3><p>Đăng ký để cập nhật sản phẩm mới và khuyến mãi.</p><form class="newsletter-form" id="newsletterForm"><input type="email" placeholder="Email của bạn" required aria-label="Email nhận tin"><button type="submit">Đăng ký</button></form></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="yearNow"></span> KPC Shop. Bảo lưu mọi quyền.</span><span>Giá và dữ liệu sản phẩm là dữ liệu minh họa cho website mẫu.</span></div>
+  </footer>
+
+  <div id="modalRoot"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
